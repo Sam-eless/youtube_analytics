@@ -12,9 +12,9 @@ vdud = Channel('UCMCgOm8GZkHp8zJ6l7_hIuA')
 # получаем значения атрибутов
 print(vdud.title)
 # вДудь
-print(vdud.video_count)
+print(vdud.number_of_videos)
 # 163
-print(vdud.url)
+print(vdud.url_link)
 # https://www.youtube.com/channel/UCMCgOm8GZkHp8zJ6l7_hIuA
 
 # менять не можем
@@ -27,7 +27,5 @@ print(Channel.get_service())
 
 
 # создать файл 'vdud.json' в данными по каналу
-vdud.save_json_in_file('vdud.json')
+vdud.save_to_json_file('vdud.json')
 
-
-print(vdud.print_info())
