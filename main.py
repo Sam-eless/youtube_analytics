@@ -1,9 +1,8 @@
 from utils.channel import Channel
 
 
-# channel_id = 'UCSJ4gkVC6NrvII8umztf0Ow'
-#
-# lofi_girl = Channel(channel_id)
+
+lofi_girl = Channel('UCSJ4gkVC6NrvII8umztf0Ow')
 # # lofi_girl.print_info()
 # print(lofi_girl)
 
@@ -29,3 +28,9 @@ print(Channel.get_service())
 # создать файл 'vdud.json' в данными по каналу
 vdud.save_to_json_file('vdud.json')
 
+# Homework 3
+print(vdud)
+
+print(vdud < lofi_girl)
+print(vdud > lofi_girl)
+print(lofi_girl + vdud)

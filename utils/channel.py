@@ -17,6 +17,34 @@ class Channel:
         self.number_of_videos = self.channel["items"][0]["statistics"]["videoCount"]
         self.number_of_views = self.channel["items"][0]["statistics"]["viewCount"]
 
+    def __str__(self):
+        """Выводит название Ютуб-канала"""
+        return f'Youtube-канал: {self.title}'
+
+    def __lt__(self, other):
+        """Выводит True если количество подписчиков первого объекта меньше, чем у второго, иначе False.
+        Принимает только экземпляры класса Channel"""
+        if isinstance(other, Channel):
+            return int(self.number_of_subscriber) < int(other.number_of_subscriber)
+        else:
+            raise ValueError('Передан не экземпляр класса Channel')
+
+    def __gt__(self, other):
+        """Выводит True если количество подписчиков первого объекта больше, чем у второго, иначе False.
+        Принимает только экземпляры класса Channel"""
+        if isinstance(other, Channel):
+            return int(self.number_of_subscriber) > int(other.number_of_subscriber)
+        else:
+            raise ValueError('Передан не экземпляр класса Channel')
+
+    def __add__(self, other):
+        """Возвращает сумму подписчиков обоих объектов.
+        Принимает только экземпляры класса Channel"""
+        if isinstance(other, Channel):
+            return int(self.number_of_subscriber) + int(other.number_of_subscriber)
+        else:
+            raise ValueError('Передан не экземпляр класса Channel')
+
     @property
     def id(self):
         """Возвращает id канала."""
