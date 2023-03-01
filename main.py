@@ -5,7 +5,6 @@ import os
 from googleapiclient.discovery import build
 from pprint import pprint
 
-
 # lofi_girl = Channel('UCSJ4gkVC6NrvII8umztf0Ow')
 # # lofi_girl.print_info()
 # print(lofi_girl)
@@ -44,13 +43,11 @@ video1 = Video(id)
 # print(video1)
 pl_id = "PL7Ntiz7eTKwrqmApjln9u4ItzhDLRtPuD"
 
-
 # api_key: str = os.getenv('YT_API_KEY')
 # youtube = build('youtube', 'v3', developerKey=api_key)
 # video = youtube.playlists().list(part='snippet', id=pl_id, ).execute()
 # # video = youtube.playlistItems().list(part="snippet", playlistId=pl_id).execute()
 # pprint(video)
-
 
 
 # print(video1)
