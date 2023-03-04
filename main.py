@@ -1,9 +1,10 @@
-from utils.channel import Channel
+# from utils.channel import Channel
 from utils.video import Video
 from utils.plvideo import PLVideo
-import os
-from googleapiclient.discovery import build
-from pprint import pprint
+from utils.playlist import PlayList
+# import os
+# from googleapiclient.discovery import build
+# from pprint import pprint
 
 # lofi_girl = Channel('UCSJ4gkVC6NrvII8umztf0Ow')
 # # lofi_girl.print_info()
@@ -32,6 +33,7 @@ from pprint import pprint
 # vdud.save_to_json_file('vdud.json')
 
 # Homework 3
+# _________________________________________________________
 # print(vdud)
 #
 # print(vdud < lofi_girl)
@@ -43,16 +45,32 @@ video1 = Video(id)
 # print(video1)
 pl_id = "PL7Ntiz7eTKwrqmApjln9u4ItzhDLRtPuD"
 
-# api_key: str = os.getenv('YT_API_KEY')
-# youtube = build('youtube', 'v3', developerKey=api_key)
-# video = youtube.playlists().list(part='snippet', id=pl_id, ).execute()
-# # video = youtube.playlistItems().list(part="snippet", playlistId=pl_id).execute()
-# pprint(video)
-
-
+# Homework 4
+# _________________________________________________________
 # print(video1)
 
 video2 = PLVideo('BBotskuyw_M', 'PL7Ntiz7eTKwrqmApjln9u4ItzhDLRtPuD')
 # pprint(video2.pl_info)
 print(video2)
 # pprint(video2.video_info)
+
+# Homework 5
+# _________________________________________________________
+pl = PlayList('PLguYHBi01DWr4bRWc4uaguASmo7lW4GCb')
+
+print(pl.title)
+# Редакция. АнтиТревел
+
+print(pl.url_link)
+# https://www.youtube.com/playlist?list=PLguYHBi01DWr4bRWc4uaguASmo7lW4GCb
+
+duration = pl.total_duration
+print(duration)
+# 3:41:01
+print(type(duration))
+# <class 'datetime.timedelta'>
+print(duration.total_seconds())
+# 13261.0
+
+pl.show_best_video()
+# https://youtu.be/9Bv2zltQKQA

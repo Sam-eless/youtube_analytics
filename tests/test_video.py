@@ -10,4 +10,4 @@ def test_init():
 
 
 def test_str():
-    assert video.__str__() == f'Youtube-видео: {video1.title}'
+    assert video.__str__() == f'Youtube-видео: {video.title}'
