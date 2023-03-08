@@ -11,3 +11,10 @@ def test_init():
 
 def test_str():
     assert video.__str__() == f'Youtube-видео: {video.title}'
+
+
+def test_except_init():
+    video1 = Video("broken_video_id")
+    assert video1.video_id == "broken_video_id"
+    assert video1.video_info is None
+    assert video1.title is None
